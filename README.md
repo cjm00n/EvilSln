@@ -136,6 +136,8 @@ $ tree -a
 
 In theory, the project could be even smaller, but for now, this should be sufficient. Compared to plaintext `.sln` or `.csproj` files, `.suo` is hidden (folders and files starting with `.` are not displayed by default in the file explorer) and its content is harder to read. There is also limited documentation describing the structure of this file, making it easier to overlook even with careful inspection.
 
+Furthermore, due to Visual Studio's behavior of saving new content into the .suo file upon closing, the payload content is cleared, providing a natural concealment to this exploit technique. Additionally, this characteristic ensures that the exploit won't be triggered multiple times.
+
 Lazarus has shown us how to poison projects:
 
 - Make the project publicly available on GitHub, for example, [Active North Korean campaign targeting security researchers](https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/)
@@ -162,8 +164,6 @@ git clone https://github.com/cjm00n/EvilSln
 Tested version: 17.7.5 (VS2022 update at 2023.10). 
 
 No Smartscreen warning, No trust need, No futher interaction need. But it will not be fixed, because Microsoft consider it's not a vulnerability.
-
-Furthermore, due to Visual Studio's behavior of saving new content into the .suo file upon closing, the payload content is cleared, providing a natural concealment to this exploit technique. Additionally, this characteristic ensures that the exploit won't be triggered multiple times.
 
 # Mitigation
 
