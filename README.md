@@ -163,6 +163,8 @@ Tested version: 17.7.5 (VS2022 update at 2023.10).
 
 No Smartscreen warning, No trust need, No futher interaction need. But it will not be fixed, because Microsoft consider it's not a vulnerability.
 
+Furthermore, due to Visual Studio's behavior of saving new content into the .suo file upon closing, the payload content is cleared, providing a natural concealment to this exploit technique. Additionally, this characteristic ensures that the exploit won't be triggered multiple times.
+
 # Mitigation
 
 1. Follow the steps outlined in Microsoft's article to manually open relevant settings: [Improving developer security with Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/improving-developer-security-with-visual-studio-2022/)
