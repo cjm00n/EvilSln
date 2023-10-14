@@ -4,7 +4,7 @@ A New Exploitation Technique for Visual Studio Projects
 
 # Background
 
-Using code projects for phishing attacks is not a new concept. In early 2021, the Lazarus APT group employed a specific attack technique in their campaign targeting security researchers. They embedded malicious event commands within Visual Studio project files, allowing the execution of harmful code during project compilation, as detailed in: [Active North Korean campaign targeting security researchers](https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/)
+Using code projects for phishing attacks is not a new concept. In early 2021, the Lazarus APT group employed a specific attack technique in their campaign targeting security researchers. They embedded malicious event commands within Visual Studio project files, allowing the execution of harmful code when the project is compiled, as detailed in: [New campaign targeting security researchers](https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/)
 
 This incident has once again brought the security of Visual Studio into the public eye. However, it is important to note that Visual Studio is not the only product with such risks. JetBrains' IDEs, VSCode, and other text editors also face similar vulnerabilities when opening unsafe projects. As a response, these products have introduced trust zone mechanisms that disable certain risky functionalities in untrusted environments, aiming to protect their users.
 
@@ -140,8 +140,8 @@ Furthermore, due to Visual Studio's behavior of saving new content into the .suo
 
 Lazarus has shown us how to poison projects:
 
-- Make the project publicly available on GitHub, for example, [Active North Korean campaign targeting security researchers](https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/)
-- Send the project through a social platform, for example, [New campaign targeting security researchers](https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/)
+- Make the project publicly available on GitHub, for example, [Active North Korean campaign targeting security researchers](https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/) (Just hide the backdoor in code) 
+- Send the project through a social platform, for example, [New campaign targeting security researchers](https://blog.google/threat-analysis-group/new-campaign-targeting-security-researchers/) (Use `PreBuildEvent` technique)
 
 Then, guide the victim to open the project. Unlike in 2021, code will be executed when the project is opened, without any additional clicks or missing MOTW / untrusted warning dialog.
 
