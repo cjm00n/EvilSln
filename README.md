@@ -163,7 +163,7 @@ git clone https://github.com/cjm00n/EvilSln
 
 Tested version: 17.7.5 (VS2022 update at 2023.10). 
 
-No Smartscreen warning, No trust need, No futher interaction need. But it will not be fixed, because Microsoft consider it's not a vulnerability.
+No Smartscreen warning, No trust need, No further interaction need. But it will not be fixed, because Microsoft consider it's not a vulnerability.
 
 # Mitigation
 
